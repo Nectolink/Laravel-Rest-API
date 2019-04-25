@@ -11,38 +11,69 @@
 
 <p>
 ------------
+    <br>
 Table Admin:
+    <br>
 ------------
+    <br>
 AID(P-K)
+    <br>
 USER_NAME
+    <br>
 PASSWORD
+    <br>
 ------------
-
+<br>
 ----------------
+    <br>
 Table Employee:
+    <br>
 ----------------
+    <br>
 EID(P-K)
+    <br>
 FIRSTNAME
+    <br>
 LASTNAME
+    <br>
 CNIC
+    <br>
 PHONE
+    <br>
 EMAIL
+    <br>
 HOMEADDRESS
+    <br>
 DEPARTMENT
+    <br>
 DESIGNATION
+    <br>
 STARTDATE
+    <br>
 WORKSTATUS
+    <br>
 ---------------
-
+<br>
 ---------------
+<br>
 Table Leave
+    <br>
 ---------------
+<br>
 LID(P-K)
+    <br>
 EID(F-K)
+    <br>
 STARTLEAVEDATE
+    <br>
 ENDLEAVEDATE
+    <br>
 REASON
+    <br>
 PRIORITY
+    <br>
 STATUS
+    <br>
 ---------------
+    <br>
 </p>
