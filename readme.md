@@ -8,6 +8,8 @@
 </p>
 <H1>Employee Managment System</H1>
 <p>Uses employee database  </p>
+
+<p>
 ------------
 Table Admin:
 ------------
@@ -43,4 +45,4 @@ REASON
 PRIORITY
 STATUS
 ---------------
-
+</p>
