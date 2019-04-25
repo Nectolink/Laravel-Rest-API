@@ -8,3 +8,39 @@
 </p>
 <H1>Employee Managment System</H1>
 <p>Uses employee database  </p>
+------------
+Table Admin:
+------------
+AID(P-K)
+USER_NAME
+PASSWORD
+------------
+
+----------------
+Table Employee:
+----------------
+EID(P-K)
+FIRSTNAME
+LASTNAME
+CNIC
+PHONE
+EMAIL
+HOMEADDRESS
+DEPARTMENT
+DESIGNATION
+STARTDATE
+WORKSTATUS
+---------------
+
+---------------
+Table Leave
+---------------
+LID(P-K)
+EID(F-K)
+STARTLEAVEDATE
+ENDLEAVEDATE
+REASON
+PRIORITY
+STATUS
+---------------
+
