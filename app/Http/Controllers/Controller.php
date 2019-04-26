@@ -16,14 +16,14 @@ class Controller extends BaseController
     public function getData()
     {  
        $RawQuery = Response::json( DB::select( DB::raw("SELECT * FROM employee")) );
-       $Data = Response::json(DB::table('employee')->get()); 
+       //$Data = Response::json(DB::table('employee')->get()); 
         return $RawQuery;
     }
 
     public function getLeave()
     {
         $RawQuery = Response::json( DB::select( DB::raw("SELECT * FROM leavereq")) );
-       $Data = Response::json(DB::table('leavereq')->get()); 
+       //$Data = Response::json(DB::table('leavereq')->get()); 
         return $RawQuery;
     }
 
@@ -39,6 +39,19 @@ class Controller extends BaseController
       $Query = Response::json( DB::update( DB::raw("UPDATE leavereq SET `STATUS`= '$status' WHERE `LID`= $id")) );
       return $Query;
     }
-    
+  
+    public function postLeave(Request $request)
+    {
+        $post = DB::table('leavereq')->insert([
+                   'EID' => '1',
+                   'STARTLEAVEDATE' => '2019-04-01',
+                   'ENDLEAVEDATE' => '2019-04-19',
+                   'REASON' => 'Laravel Basic Learning Leave',
+                   'PRIORITY' => 'High', 
+                   'STATUS' => 'Pending'
+                 ]);
+        return Response::json($post);
+    }
+
 
 }
