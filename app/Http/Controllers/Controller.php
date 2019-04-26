@@ -42,13 +42,20 @@ class Controller extends BaseController
   
     public function postLeave(Request $request)
     {
+        //Call it like => http://127.0.0.1:8000/postLeave?EID=1&STARTLEAVEDATE=2019-04-11&ENDLEAVEDATE=2019-04-11&REASON=Non&PRIORITY=High&STATUS=Pending
+        $EID = $request->get("EID");
+        $STARTLEAVEDATE = $request->get("STARTLEAVEDATE");
+        $ENDLEAVEDATE = $request->get("ENDLEAVEDATE");
+        $REASON = $request->get("REASON");
+        $PRIORITY = $request->get("PRIORITY");
+        $STATUS = $request->get("STATUS");
         $post = DB::table('leavereq')->insert([
-                   'EID' => '1',
-                   'STARTLEAVEDATE' => '2019-04-01',
-                   'ENDLEAVEDATE' => '2019-04-19',
-                   'REASON' => 'Laravel Basic Learning Leave',
-                   'PRIORITY' => 'High', 
-                   'STATUS' => 'Pending'
+                   'EID' => $EID,
+                   'STARTLEAVEDATE' => $STARTLEAVEDATE,
+                   'ENDLEAVEDATE' => $ENDLEAVEDATE,
+                   'REASON' => $REASON,
+                   'PRIORITY' => $PRIORITY, 
+                   'STATUS' => $STATUS
                  ]);
         return Response::json($post);
     }
