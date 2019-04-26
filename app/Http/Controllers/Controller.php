@@ -59,6 +59,18 @@ class Controller extends BaseController
                  ]);
         return Response::json($post);
     }
+    public function sendMessage(Request $request)
+    {
+        $TO = $request->get("TO");
+        $MESSAGE = $request->get("MESSAGE");
+        $CODE = $request->get("CODE");
+        $post = DB::table('messagebox')->insert([
+            'TO' => $TO,
+            'MESSAGE' => $MESSAGE,
+            'CODE' => $CODE
+          ]);
+          return Response::json($post);
+    }
 
 
 }
