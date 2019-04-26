@@ -34,9 +34,8 @@ class Controller extends BaseController
          
     }
 
-    public function LeaveStatusChange(Request $request,$id)
-    {
-      $status = "Accept";  
+       public function LeaveStatusChange(Request $request,$id,$status)
+    {  
       $Query = Response::json( DB::update( DB::raw("UPDATE leavereq SET `STATUS`= '$status' WHERE `LID`= $id")) );
       return $Query;
     }
