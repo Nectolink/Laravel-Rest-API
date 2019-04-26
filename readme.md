@@ -77,3 +77,9 @@ STATUS
 ---------------
     <br>
 </p>
+
+<p>To get user data => http://127.0.0.1:8000/getData</p>
+<p>To get leave data => http://127.0.0.1:8000/leaveData</p>
+<p>To get leave status data => http://127.0.0.1:8000/employeeLeaveStatus/{id}</p>
+<p>To change leave status data => http://127.0.0.1:8000/LeaveStatusChange/{id}/{status}</p>
+
