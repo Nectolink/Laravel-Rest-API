@@ -20,6 +20,7 @@ Route::get('getLeave','Controller@getLeave');
 
 //All post APIs.
 Route::match(['get', 'post'],'postLeave','Controller@postLeave');
+Route::match(['get', 'post'],'sendMessage','Controller@sendMessage');
 Route::match(['get', 'post'],'employeeLeaveStatus/{id}','Controller@employeeLeaveStatus');
 Route::match(['get', 'post'],'LeaveStatusChange/{id}/{status}','Controller@LeaveStatusChange');
 
